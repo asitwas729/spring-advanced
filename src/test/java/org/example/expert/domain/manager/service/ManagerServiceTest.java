@@ -64,7 +64,7 @@ class ManagerServiceTest {
         given(todoRepository.findById(todoId)).willReturn(Optional.of(todo));
 
         // when & then
-        InvalidRequestException exception = assertThrows(InvalidRequestException.class, () ->
+        IllegalArgumentException exception = assertThrows(IllegalArgumentException.class, () ->
             managerService.saveManager(authUser, todoId, managerSaveRequest)
         );
 
