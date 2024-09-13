@@ -12,4 +12,9 @@ public class UserResponse {
         this.id = id;
         this.email = email;
     }
+
+    public UserResponse(Long id) {
+        this.id = id;
+        this.email = null;
+    }
 }
